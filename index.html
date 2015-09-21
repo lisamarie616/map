@@ -1,0 +1,18 @@
+<script type="text/javascript">
+function map(arr, callback) {
+	var result = [];
+	for (i = 0; i < arr.length; i++) {
+	  result[i] = callback(arr[i]);		
+	}
+	console.log(result);
+}
+
+map([1, 2, 3], function(value) { // returns [2,3,4]
+    return value += 1;
+});
+
+map([1, 2, 3], function(value) { // returns [2,4,6]
+    return value *= 2;
+});
+
+</script>
